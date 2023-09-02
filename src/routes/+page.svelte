@@ -7,6 +7,9 @@
 	function increment() {
 		count += 1;
 	}
+
+    // リアクティブ宣言
+ 	$: doubled = count * 2;
 </script>
 
 <h1>Hello {name.toUpperCase()}!</h1>
@@ -18,6 +21,8 @@
 	Clicked {count}
 	{count === 1 ? 'time' : 'times'}
 </button>
+
+<p>{count} doubled is {doubled}</p>
 
 
 <style>
